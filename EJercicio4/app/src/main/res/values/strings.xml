@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Ejercicio4</string>
+    <string name="geneButton">Button</string>
+    <string name="toggleButtonOn">Activate</string>
+    <string name="toggleButtonOff">Desactivate</string>
+    <string name="ToggleButtonText" translatable="false">ToggleButton</string>
+    <string name="checkBox1" translatable="false">CheckBox 1</string>
+    <string name="checkBox2" translatable="false">CheckBox 2</string>
+    <string name="checkBox3" translatable="false">CheckBox 3</string>
+    <string name="switchName" translatable="false">Switch</string>
+    <string name="switchOn">Activate</string>
+    <string name="switchOff">Desactivate</string>
+    <string name="txtDefault">Text</string>
+    <string name="txtCall">Call</string>
+    <string name="edad" translatable="false">Edad:</string>
+    /*************************************************/
+    <string name="txtEdad">Age:</string>
+    <string name="txtValorEStrellas">Score:</string>
+</resources>

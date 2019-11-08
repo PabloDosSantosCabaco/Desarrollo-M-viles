@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tema3_Ej3</string>
+    <string name="option1">Option 1</string>
+    <string name="option2">Option 2</string>
+    <string name="goCalendar">Choose date</string>
+    <string name="goClock">Time</string>
+    <string name="empty"></string>
+
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+</resources>
