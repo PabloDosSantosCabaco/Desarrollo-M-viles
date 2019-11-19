@@ -41,7 +41,7 @@ public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.MiHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return peliculas.size();
     }
 
     public class MiHolder extends RecyclerView.ViewHolder{

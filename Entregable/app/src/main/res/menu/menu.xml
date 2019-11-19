@@ -2,9 +2,14 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/itemListado"
         android:icon="@mipmap/ic_launcher"
         android:title="@string/listado"
         app:showAsAction="always|withText" />
-    <item android:title="@string/fav" />
-    <item android:title="@string/add" />
+    <item
+        android:id="@+id/itemFav"
+        android:title="@string/fav" />
+    <item
+        android:id="@+id/itemAdd"
+        android:title="@string/add" />
 </menu>
