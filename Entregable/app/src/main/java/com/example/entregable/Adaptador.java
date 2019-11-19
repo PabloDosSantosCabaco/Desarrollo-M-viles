@@ -1,23 +1,39 @@
 package com.example.entregable;
 
+import android.content.Context;
 import android.media.Image;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adaptador extends RecyclerView.Adapter<Adaptador.MiHolder>{
+public class Adaptador extends RecyclerView.Adapter<Adaptador.MiHolder> implements View.OnClickListener{
 
     ArrayList<Pelicula> elementos;
+    private View.OnClickListener listener;
+    RecyclerView rv;
 
-    public Adaptador(ArrayList<Pelicula> elementos) {
+
+    public Adaptador( ArrayList<Pelicula> elementos, RecyclerView rv) {
         this.elementos = elementos;
+        this.rv=rv;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(listener!=null)listener.onClick(v);
+    }
+
+    public void setOnClickListener(View.OnClickListener v){
+        this.listener = v;
     }
 
     @NonNull
@@ -25,6 +41,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MiHolder>{
     public MiHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View elemento = LayoutInflater.from(parent.getContext()).inflate(R.layout.elemento,
                 parent,false);
+        elemento.setOnClickListener(this);
         MiHolder mh = new MiHolder(elemento);
         return mh;
     }
@@ -43,6 +60,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MiHolder>{
     public int getItemCount() {
         return this.elementos.size();
     }
+
 
 
     public class MiHolder extends RecyclerView.ViewHolder {

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Entregable</string>
+    <string name="btnOcult">Ocultar Action Bar</string>
+    
+    
+    <string name="listado">Listado Completo</string>
+    <string name="fav">Favoritos</string>
+    <string name="add">Añadir</string>
 </resources>
