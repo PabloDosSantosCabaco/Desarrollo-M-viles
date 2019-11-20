@@ -40,6 +40,7 @@ public class ListadoCompleto extends AppCompatActivity {
                 int pos = rv.getChildAdapterPosition(v);
                 it.putExtra("Cartel", pelis.get(pos).getPortada());
                 it.putExtra("Sinopsis",pelis.get(pos).getSinopsis());
+                it.putExtra("Link",pelis.get(pos).getIdYoutube());
                 startActivity(it);
             }
         };

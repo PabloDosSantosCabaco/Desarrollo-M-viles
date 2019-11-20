@@ -46,7 +46,8 @@ public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.MiHolder> implem
         holder.txtFechaEstreno.setText(peli.getFecha2());
         holder.txtSala.setText(peli.getSala());
         holder.imgClasi.setImageResource(peli.getClasi());
-        holder.imgFav.setImageResource(android.R.drawable.btn_star_big_on);
+        if(peli.getFavorita()) holder.imgFav.setImageResource(android.R.drawable.btn_star_big_on);
+        else    holder.imgFav.setImageResource(android.R.drawable.btn_star_big_off);
     }
 
     @Override

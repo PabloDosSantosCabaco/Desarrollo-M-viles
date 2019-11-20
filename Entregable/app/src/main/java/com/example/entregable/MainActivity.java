@@ -1,6 +1,7 @@
 package com.example.entregable;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,17 +38,27 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
             case R.id.itemListado:
-                Toast.makeText(this,"HOlo",Toast.LENGTH_SHORT).show();
                 Intent it = new Intent(MainActivity.this,ListadoCompleto.class);
                 it.putExtra("Peliculas",pelis);
                 startActivity(it);
                 return true;
             case R.id.itemFav:
-            return true;
+                int MYRQUESTCODEFAV = 0;
+                Intent it2 = new Intent(MainActivity.this,Favoritos.class);
+                it2.putExtra("Peliculas",pelis);
+                startActivityForResult(it2,MYRQUESTCODEFAV);
+                return true;
             case R.id.itemAdd:
                 return true;
             default:
                 return false;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode == 0 && resultCode == RESULT_OK){
+            pelis = (ArrayList<Pelicula>)data.getSerializableExtra("Peliculas");
         }
     }
 

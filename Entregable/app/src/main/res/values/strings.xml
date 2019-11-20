@@ -2,9 +2,27 @@
     <string name="app_name">Entregable</string>
     <string name="btnHide">Ocultar Action Bar</string>
     <string name="btnShow">Mostrar Action Bar</string>
+    <string name="espacio"></string>
 
 
     <string name="listado">Listado Completo</string>
     <string name="fav">Favoritos</string>
     <string name="add">Añadir</string>
+
+    <string name="addFav">Añadir/Quitar Favoritos</string>
+
+    <string name="titulo">Título</string>
+    <string name="director">Director</string>
+    <string name="duracion">Duracion</string>
+    <string name="fechaNull">Fecha no seleccionada</string>
+    <string name="btnFecha">Seleccionar fecha</string>
+    <string name="rbG">G</string>
+    <string name="rbNC17">NC17</string>
+    <string name="rbPG">PG</string>
+    <string name="rbPG13">PG13</string>
+    <string name="rbr4">R</string>
+
+
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>

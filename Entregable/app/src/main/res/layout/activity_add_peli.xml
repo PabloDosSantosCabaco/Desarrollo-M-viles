@@ -6,31 +6,140 @@
     android:layout_height="match_parent"
     tools:context=".AddPeli">
 
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/titulo"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/director"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <TextView
+        android:id="@+id/txtDuracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/duracion"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/txtDirector" />
+
+    <EditText
+        android:id="@+id/etxtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/espacio"
+        app:layout_constraintStart_toEndOf="@+id/txtTitulo"
+        app:layout_constraintTop_toTopOf="@+id/txtTitulo" />
+
+    <EditText
+        android:id="@+id/etxtDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/espacio"
+        app:layout_constraintStart_toStartOf="@+id/etxtTitulo"
+        app:layout_constraintTop_toTopOf="@+id/txtDirector" />
+
+    <EditText
+        android:id="@+id/etxtDuracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/espacio"
+        app:layout_constraintStart_toStartOf="@+id/etxtDirector"
+        app:layout_constraintTop_toTopOf="@+id/txtDuracion" />
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtDuracion" />
 
     <RadioGroup
+        android:id="@+id/rg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="384dp" >
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="@string/rbG" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbNC17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="@string/rbNC17" />
+
+        <RadioButton
+            android:id="@+id/rbPG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbPG" />
+
+        <RadioButton
+            android:id="@+id/rbPG13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbPG13" />
+
+        <RadioButton
+            android:id="@+id/rbR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbr4" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/btnChosseFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/btnFecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg" />
+
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/fechaNull"
+        app:layout_constraintBottom_toBottomOf="@+id/btnChosseFecha"
+        app:layout_constraintStart_toEndOf="@+id/btnChosseFecha"
+        app:layout_constraintTop_toTopOf="@+id/btnChosseFecha" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
