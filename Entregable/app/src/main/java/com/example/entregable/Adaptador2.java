@@ -11,17 +11,27 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.MiHolder> {
+public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.MiHolder> implements View.OnClickListener {
     ArrayList<Pelicula> peliculas;
-
-    public Adaptador2(ArrayList<Pelicula> peliculas) {
+    private View.OnClickListener listener;
+    RecyclerView rv;
+    public Adaptador2(ArrayList<Pelicula> peliculas, RecyclerView rv) {
         this.peliculas = peliculas;
+        this.rv = rv;
+    }
+    @Override
+    public void onClick(View v) {
+        if(listener!=null)listener.onClick(v);
     }
 
+    public void setOnClickListener(View.OnClickListener v){
+        this.listener = v;
+    }
     @Override
     public MiHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View elemento = LayoutInflater.from(parent.getContext()).inflate(R.layout.pelislista,
                 parent,false);
+        elemento.setOnClickListener(this);
         MiHolder mh = new MiHolder(elemento);
         return mh;
 
@@ -30,13 +40,13 @@ public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.MiHolder> {
     @Override
     public void onBindViewHolder(@NonNull MiHolder holder, int position) {
         Pelicula peli = this.peliculas.get(position);
-        holder.imgClasi.setImageResource(peli.getClasi());
+        holder.imgCaratula.setImageResource(peli.getPortada());
         holder.txtDirector.setText(peli.getDirector());
-        holder.txtDuracion.setText(peli.getDuracion());
-        holder.txtFechaEstreno.setText(peli.getFecha().toString());
+        holder.txtDuracion.setText(peli.getDuracion()+" minutos");
+        holder.txtFechaEstreno.setText(peli.getFecha2());
         holder.txtSala.setText(peli.getSala());
         holder.imgClasi.setImageResource(peli.getClasi());
-        //holder.imgFav.setImageResource();
+        holder.imgFav.setImageResource(android.R.drawable.btn_star_big_on);
     }
 
     @Override

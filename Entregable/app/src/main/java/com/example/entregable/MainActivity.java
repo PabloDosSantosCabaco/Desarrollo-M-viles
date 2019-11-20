@@ -35,8 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch(item.getGroupId()){
+        switch(item.getItemId()){
             case R.id.itemListado:
+                Toast.makeText(this,"HOlo",Toast.LENGTH_SHORT).show();
+                Intent it = new Intent(MainActivity.this,ListadoCompleto.class);
+                it.putExtra("Peliculas",pelis);
+                startActivity(it);
                 return true;
             case R.id.itemFav:
             return true;

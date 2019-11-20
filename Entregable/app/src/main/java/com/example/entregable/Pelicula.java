@@ -51,6 +51,9 @@ public class Pelicula implements Serializable{
     public Date getFecha() {
         return fecha;
     }
+    public String getFecha2() {
+        return dateformat.format(this.fecha);
+    }
     public void setFecha(Date fecha) {
         this.fecha=fecha;
     }

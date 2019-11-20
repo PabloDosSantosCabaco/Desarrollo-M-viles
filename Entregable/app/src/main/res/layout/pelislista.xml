@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imgCaratula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -64,10 +64,15 @@
 
     <ImageView
         android:id="@+id/imgClasi"
-        android:layout_width="48dp"
-        android:layout_height="52dp"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="60dp"
         android:alpha="0.8"
-        app:layout_constraintBottom_toBottomOf="@+id/imgCaratula"
-        app:layout_constraintEnd_toEndOf="@+id/imgCaratula"
+        android:scaleX="0.5"
+        android:scaleY=" 0.5"
+        app:layout_constraintStart_toStartOf="@+id/imgCaratula"
+        app:layout_constraintTop_toTopOf="@+id/imgCaratula"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
