@@ -90,31 +90,31 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner">
 
         <RadioButton
-            android:id="@+id/rbG"
+            android:id="@+id/g"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rbG" />
 
         <RadioButton
-            android:id="@+id/rbNC17"
+            android:id="@+id/nc17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rbNC17" />
 
         <RadioButton
-            android:id="@+id/rbPG"
+            android:id="@+id/pg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rbPG" />
 
         <RadioButton
-            android:id="@+id/rbPG13"
+            android:id="@+id/pg13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rbPG13" />
 
         <RadioButton
-            android:id="@+id/rbR"
+            android:id="@+id/r"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rbr4" />

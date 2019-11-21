@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(it2,MYRQUESTCODEFAV);
                 return true;
             case R.id.itemAdd:
+                int MYREQUESTCODEADD = 1;
+                Intent it3 = new Intent(MainActivity.this, AddPeli.class);
+                it3.putExtra("Peliculas",pelis);
+                startActivityForResult(it3,MYREQUESTCODEADD);
                 return true;
             default:
                 return false;
@@ -58,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode == 0 && resultCode == RESULT_OK){
+            pelis = (ArrayList<Pelicula>)data.getSerializableExtra("Peliculas");
+        }if(requestCode == 1 && resultCode == RESULT_OK){
             pelis = (ArrayList<Pelicula>)data.getSerializableExtra("Peliculas");
         }
     }
