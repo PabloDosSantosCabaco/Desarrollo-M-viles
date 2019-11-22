@@ -26,12 +26,9 @@ public class Favoritos extends AppCompatActivity {
         btnAddFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 for(int i=0; i<adapter.getCount(); i++){
-
                     MainActivity.pelis.get(i).setFavorita(lv.isItemChecked(i));
                 }
-
                 Intent it = new Intent();
                 setResult(RESULT_OK, it);
                 finish();

@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode == 0 && resultCode == RESULT_OK){
         }if(requestCode == 1 && resultCode == RESULT_OK){
+            adaptador.notifyDataSetChanged();
         }
     }
 
@@ -76,10 +77,13 @@ public class MainActivity extends AppCompatActivity {
         btnHideAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!abHide)
+                if(!abHide) {
+                    btnHideAB.setText("Mostrar Action Bar");
                     getSupportActionBar().hide();
-                else
+                }else {
+                    btnHideAB.setText("Ocultar Action Bar");
                     getSupportActionBar().show();
+                }
                 abHide = !abHide;
             }
         });

@@ -35,7 +35,6 @@ public class AddPeli extends AppCompatActivity {
     EditText etxtTitulo, etxtDirector, etxtDuracion;
     Spinner spinner;
     RadioGroup rg;
-    boolean muestra = false;
     int MYREQUESTCODEDATE = 0;
     Pelicula newPeli;
 
@@ -69,10 +68,6 @@ public class AddPeli extends AppCompatActivity {
         txtDirector = findViewById(R.id.txtDirector);
         txtDuracion = findViewById(R.id.txtDuracion);
 
-
-        Calendar c=Calendar.getInstance();
-
-        fecha = c.getTime();
         //Construyo el apartado salas e inicializo su valor
         spinner = findViewById(R.id.spinner);
         final String[] salas = getResources().getStringArray(R.array.salas);
@@ -146,13 +141,13 @@ public class AddPeli extends AppCompatActivity {
                 if(!etxtTitulo.getText().equals("") &&
                     !etxtDirector.getText().equals("") &&
                     !etxtDuracion.getText().equals("") &&
-                    !txtFecha.getText().equals("Fecha no seleccionada")) {
+                    !txtFecha.getText().equals(getString(R.string.fechaNull))) {
 
 
                     director = etxtDirector.getText().toString();
                     duracion = Integer.parseInt(etxtDuracion.getText().toString());
                     titulo = etxtTitulo.getText().toString();
-                    portada = R.drawable.akira;
+                    portada = R.drawable.newcover;
                     newPeli = new Pelicula(titulo, director, duracion, fecha, sala, clasi, portada);
                     MainActivity.pelis.add(newPeli);
                     Intent it = new Intent();

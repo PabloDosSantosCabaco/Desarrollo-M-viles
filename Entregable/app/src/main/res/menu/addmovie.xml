@@ -4,9 +4,12 @@
 
     <item
         android:id="@+id/itemAceptar"
+        android:icon="@android:drawable/ic_menu_save"
         android:title="@string/aceptar"
         app:showAsAction="always" />
     <item
         android:id="@+id/itemCancelar"
-        android:title="@string/cancelar" />
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="@string/cancelar"
+        app:showAsAction="always" />
 </menu>

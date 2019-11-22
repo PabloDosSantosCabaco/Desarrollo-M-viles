@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8A997FF5"
     tools:context=".AddPeli">
 
     <TextView
@@ -33,9 +34,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:inputType="number"
         android:text="@string/duracion"
         android:textSize="20sp"
-        android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/txtTitulo"
         app:layout_constraintTop_toBottomOf="@+id/txtDirector" />
 
@@ -47,7 +48,7 @@
         android:layout_marginLeft="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="aa"
+        android:text="@string/espacio"
         app:layout_constraintStart_toEndOf="@+id/txtTitulo"
         app:layout_constraintTop_toTopOf="@+id/txtTitulo" />
 
@@ -57,7 +58,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="bb"
+        android:text="@string/espacio"
         app:layout_constraintStart_toStartOf="@+id/etxtTitulo"
         app:layout_constraintTop_toTopOf="@+id/txtDirector" />
 
@@ -67,7 +68,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="11"
+        android:text="@string/espacio"
         app:layout_constraintStart_toStartOf="@+id/etxtDirector"
         app:layout_constraintTop_toTopOf="@+id/txtDuracion" />
 
@@ -96,12 +97,6 @@
             android:text="@string/rbG" />
 
         <RadioButton
-            android:id="@+id/nc17"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/rbNC17" />
-
-        <RadioButton
             android:id="@+id/pg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -118,6 +113,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rbr4" />
+
+        <RadioButton
+            android:id="@+id/nc17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbNC17" />
     </RadioGroup>
 
     <Button
@@ -137,7 +138,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="11/10/2019"
+        android:text="@string/fechaNull"
         app:layout_constraintBottom_toBottomOf="@+id/btnChosseFecha"
         app:layout_constraintStart_toEndOf="@+id/btnChosseFecha"
         app:layout_constraintTop_toTopOf="@+id/btnChosseFecha" />

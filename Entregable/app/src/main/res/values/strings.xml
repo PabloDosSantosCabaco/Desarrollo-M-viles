@@ -16,11 +16,11 @@
     <string name="duracion">Duracion</string>
     <string name="fechaNull">Fecha no seleccionada</string>
     <string name="btnFecha">Seleccionar fecha</string>
-    <string name="rbG">G</string>
-    <string name="rbNC17">NC17</string>
-    <string name="rbPG">PG</string>
-    <string name="rbPG13">PG13</string>
-    <string name="rbr4">R</string>
+    <string name="rbG">Todos los públicos</string>
+    <string name="rbNC17">+18 años</string>
+    <string name="rbPG">+10 años</string>
+    <string name="rbPG13">+13 años</string>
+    <string name="rbr4">+17 años</string>
     <string name="sala">Sala</string>
     <string-array name="salas">
         <item >Sala 1</item>
