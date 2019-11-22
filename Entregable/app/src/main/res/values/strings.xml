@@ -21,6 +21,7 @@
     <string name="rbPG">PG</string>
     <string name="rbPG13">PG13</string>
     <string name="rbr4">R</string>
+    <string name="sala">Sala</string>
     <string-array name="salas">
         <item >Sala 1</item>
         <item >Sala 2</item>
@@ -28,7 +29,7 @@
         <item >Sala 4</item>
         <item >Sala VIP</item>
     </string-array>
-
+    <string name="error">Rellene todos los campos</string>
     <string name="aceptar">Aceptar</string>
     <string name="cancelar">Cancelar</string>
 </resources>

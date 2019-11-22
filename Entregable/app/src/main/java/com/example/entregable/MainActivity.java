@@ -25,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
     Button btnHideAB;
     RecyclerView rv;
     Boolean abHide = false;
-    ArrayList<Pelicula> pelis = rellenaPeliculas();
+    static ArrayList<Pelicula> pelis;
     TextView txtSelectedMovie;
+    Adaptador adaptador;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -39,19 +40,16 @@ public class MainActivity extends AppCompatActivity {
         switch(item.getItemId()){
             case R.id.itemListado:
                 Intent it = new Intent(MainActivity.this,ListadoCompleto.class);
-                it.putExtra("Peliculas",pelis);
                 startActivity(it);
                 return true;
             case R.id.itemFav:
                 int MYRQUESTCODEFAV = 0;
                 Intent it2 = new Intent(MainActivity.this,Favoritos.class);
-                it2.putExtra("Peliculas",pelis);
                 startActivityForResult(it2,MYRQUESTCODEFAV);
                 return true;
             case R.id.itemAdd:
                 int MYREQUESTCODEADD = 1;
                 Intent it3 = new Intent(MainActivity.this, AddPeli.class);
-                it3.putExtra("Peliculas",pelis);
                 startActivityForResult(it3,MYREQUESTCODEADD);
                 return true;
             default:
@@ -62,9 +60,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode == 0 && resultCode == RESULT_OK){
-            pelis = (ArrayList<Pelicula>)data.getSerializableExtra("Peliculas");
         }if(requestCode == 1 && resultCode == RESULT_OK){
-            pelis = (ArrayList<Pelicula>)data.getSerializableExtra("Peliculas");
         }
     }
 
@@ -72,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        pelis = rellenaPeliculas();
         txtSelectedMovie = findViewById(R.id.txtSelectedMovie);
         txtSelectedMovie.setText("Not Movie Selected");
 
@@ -89,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         rv = findViewById(R.id.rv);
-        Adaptador adaptador = new Adaptador(pelis,rv);
+        adaptador = new Adaptador(pelis,rv);
         GridLayoutManager gi = new GridLayoutManager(this,1,
                 GridLayoutManager.VERTICAL, false);
 

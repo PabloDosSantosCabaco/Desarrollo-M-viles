@@ -17,7 +17,6 @@ import java.util.ArrayList;
 public class ListadoCompleto extends AppCompatActivity {
     ActionBar ab;
     RecyclerView rv;
-    ArrayList<Pelicula> pelis;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +25,7 @@ public class ListadoCompleto extends AppCompatActivity {
         Intent it = getIntent();
 
         rv = findViewById(R.id.rvListado);
-        pelis = (ArrayList<Pelicula>) it.getSerializableExtra("Peliculas");
-        Adaptador2 adaptador2 = new Adaptador2(pelis,rv);
+        Adaptador2 adaptador2 = new Adaptador2(rv);
         GridLayoutManager gi = new GridLayoutManager(this,1,
             GridLayoutManager.VERTICAL, false);
         rv.setLayoutManager(gi);
@@ -38,9 +36,9 @@ public class ListadoCompleto extends AppCompatActivity {
             public void onClick(View v) {
                 Intent it = new Intent(ListadoCompleto.this, Cartel.class);
                 int pos = rv.getChildAdapterPosition(v);
-                it.putExtra("Cartel", pelis.get(pos).getPortada());
-                it.putExtra("Sinopsis",pelis.get(pos).getSinopsis());
-                it.putExtra("Link",pelis.get(pos).getIdYoutube());
+                it.putExtra("Cartel", MainActivity.pelis.get(pos).getPortada());
+                it.putExtra("Sinopsis",MainActivity.pelis.get(pos).getSinopsis());
+                it.putExtra("Link",MainActivity.pelis.get(pos).getIdYoutube());
                 startActivity(it);
             }
         };

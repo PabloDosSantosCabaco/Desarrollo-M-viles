@@ -35,6 +35,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/duracion"
         android:textSize="20sp"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/txtTitulo"
         app:layout_constraintTop_toBottomOf="@+id/txtDirector" />
 
@@ -46,7 +47,7 @@
         android:layout_marginLeft="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/espacio"
+        android:text="aa"
         app:layout_constraintStart_toEndOf="@+id/txtTitulo"
         app:layout_constraintTop_toTopOf="@+id/txtTitulo" />
 
@@ -56,7 +57,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/espacio"
+        android:text="bb"
         app:layout_constraintStart_toStartOf="@+id/etxtTitulo"
         app:layout_constraintTop_toTopOf="@+id/txtDirector" />
 
@@ -65,19 +66,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/espacio"
+        android:inputType="number"
+        android:text="11"
         app:layout_constraintStart_toStartOf="@+id/etxtDirector"
         app:layout_constraintTop_toTopOf="@+id/txtDuracion" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtDuracion" />
+        android:layout_width="214dp"
+        android:layout_height="41dp"
+        app:layout_constraintStart_toStartOf="@+id/etxtDuracion"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <RadioGroup
         android:id="@+id/rg"
@@ -93,6 +92,7 @@
             android:id="@+id/g"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/rbG" />
 
         <RadioButton
@@ -137,9 +137,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="@string/fechaNull"
+        android:text="11/10/2019"
         app:layout_constraintBottom_toBottomOf="@+id/btnChosseFecha"
         app:layout_constraintStart_toEndOf="@+id/btnChosseFecha"
         app:layout_constraintTop_toTopOf="@+id/btnChosseFecha" />
+
+    <TextView
+        android:id="@+id/txtError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:text="@string/error"
+        android:textColor="#F00505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/sala"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtDuracion"
+        app:layout_constraintTop_toBottomOf="@+id/txtDuracion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

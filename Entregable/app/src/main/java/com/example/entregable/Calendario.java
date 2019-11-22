@@ -10,11 +10,12 @@ import android.widget.Button;
 import android.widget.CalendarView;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class Calendario extends AppCompatActivity {
     Button btn;
     CalendarView cal;
-    long fecha=-1;
+    long fecha = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

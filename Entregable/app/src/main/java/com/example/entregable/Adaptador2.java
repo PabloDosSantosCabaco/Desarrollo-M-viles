@@ -12,11 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.MiHolder> implements View.OnClickListener {
-    ArrayList<Pelicula> peliculas;
     private View.OnClickListener listener;
     RecyclerView rv;
-    public Adaptador2(ArrayList<Pelicula> peliculas, RecyclerView rv) {
-        this.peliculas = peliculas;
+    public Adaptador2(RecyclerView rv) {
         this.rv = rv;
     }
     @Override
@@ -39,7 +37,7 @@ public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.MiHolder> implem
 
     @Override
     public void onBindViewHolder(@NonNull MiHolder holder, int position) {
-        Pelicula peli = this.peliculas.get(position);
+        Pelicula peli = MainActivity.pelis.get(position);
         holder.imgCaratula.setImageResource(peli.getPortada());
         holder.txtDirector.setText(peli.getDirector());
         holder.txtDuracion.setText(peli.getDuracion()+" minutos");
@@ -52,7 +50,7 @@ public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.MiHolder> implem
 
     @Override
     public int getItemCount() {
-        return peliculas.size();
+        return MainActivity.pelis.size();
     }
 
     public class MiHolder extends RecyclerView.ViewHolder{

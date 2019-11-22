@@ -11,5 +11,6 @@
         android:title="@string/fav" />
     <item
         android:id="@+id/itemAdd"
-        android:title="@string/add" />
+        android:title="@string/add"
+        app:showAsAction="always" />
 </menu>
